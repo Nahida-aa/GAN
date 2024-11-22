@@ -26,8 +26,8 @@ generator = Generator().to(device)
 discriminator = Discriminator().to(device)
 optimizer_G = optim.Adam(generator.parameters(), lr=TRAINING_PARAMETERS['learning_rate'], betas=(0.5, 0.999))
 optimizer_D = optim.Adam(discriminator.parameters(), lr=TRAINING_PARAMETERS['learning_rate'], betas=(0.5, 0.999))
+# adversarial_loss(input, target) = -1/n * (target * log(input) + (1 - target) * log(1 - input))
 adversarial_loss = torch.nn.BCELoss()
-
 
 def train_GAN(epochs, save_intervals):
     train_loader = get_data_loader(TRAINING_PARAMETERS['batch_size'])
