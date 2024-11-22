@@ -2,8 +2,14 @@
 一个基于PyTorch的GAN实现，用于生成手写数字图像。
 
 - [data](./data/): 默认数据文件夹
+- [docs](./docs/): 文档文件夹
 - [notebooks](./notebooks/): Jupyter notebooks文件夹
 - [src](./src/): 源代码文件夹
+  - [data](./src/data/): 数据加载和处理文件夹
+  - [models](./src/models/): 模型定义文件夹
+  - [training](./src/training/): 训练文件夹
+  - [inference](./src/inference/): 推理文件夹
+  - [utils](./src/utils/): 工具文件夹
 - [tests](./tests/): 测试文件夹
 - [configs](./configs/): 配置文件夹
 - [scripts](./scripts/): 脚本文件夹
@@ -61,4 +67,3 @@ python src/training/train.py
   }
 }
 ```
-
