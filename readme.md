@@ -4,25 +4,31 @@ pip install -r requirements.txt
 ```
 训练模型
 ```sh
-bash scripts/run_training.sh
+python src/training/train.py
 ```
 推理
 ```sh
-bash scripts/run_inference.sh --image path_to_image.png
+# 现在还没有好的训练结果，所以暂时没写推理脚本
 ```
 [configs/config.json](./configs/config.json)
 ```json
 {
-  "batch_size": 64,
-  "learning_rate": 0.0002,
-  "epochs": 100,
-  "save_interval": 10,
+  "training_parameters": {
+    "batch_size": 64,
+    "learning_rate": 0.0002,
+    "epochs": 200,
+    "save_intervals": [
+      {"start": 0, "end": 10, "interval": 1},
+      {"start": 10, "end": 50, "interval": 5},
+      {"start": 50, "end": 200, "interval": 10}
+    ]
+  },
   "path": {
-    "data": "data/",
-    "output": "output/",
-    "weights": "output/weights/",
-    "images": "output/images/",
-    "logs": "output/logs/"
+    "data_dir": "data/",
+    "output_dir": "output/",
+    "weights_dir": "output/weights/",
+    "images_dir": "output/images/",
+    "logs_dir": "output/logs/"
   }
 }
 ```
