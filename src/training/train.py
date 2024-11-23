@@ -38,9 +38,9 @@ def load_model(generator, discriminator, epoch):
     else:
         print(f"No saved model found for epoch {epoch}")
 
-def train_GAN(epochs, save_intervals, start_epoch=0):
+def train_GAN(end_epoch, save_intervals, start_epoch=0):
     train_loader = get_data_loader(TRAINING_PARAMETERS['batch_size'])
-    for epoch in range(start_epoch, epochs):
+    for epoch in range(start_epoch, end_epoch):
         for i, (imgs, labels) in enumerate(train_loader):
             # 真实图像
             real_imgs = imgs.to(device)
@@ -71,12 +71,12 @@ def train_GAN(epochs, save_intervals, start_epoch=0):
             save_images(epoch=epoch, generator=generator, device=device)
             save_model(epoch=epoch, generator=generator, discriminator=discriminator)
     # 保存最终模型
-    save_images(epochs-1, generator, device)
-    save_model(epochs-1, generator, discriminator)
+    save_images(end_epoch-1, generator, device)
+    save_model(end_epoch-1, generator, discriminator)
 
 if __name__ == "__main__":
     start_epoch = TRAINING_PARAMETERS.get('start_epoch', 0)  # 之前训练的轮数
     # 加载之前的模型
     if start_epoch > 0:
         load_model(generator, discriminator, start_epoch)
-    train_GAN(epochs=TRAINING_PARAMETERS['epochs'], save_intervals=TRAINING_PARAMETERS['save_intervals'], start_epoch=start_epoch)
+    train_GAN(end_epoch=TRAINING_PARAMETERS['end_epoch'], save_intervals=TRAINING_PARAMETERS['save_intervals'], start_epoch=start_epoch)

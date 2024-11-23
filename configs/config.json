@@ -3,7 +3,7 @@
     "batch_size": 64,
     "learning_rate": 0.0002,
     "start_epoch": 1000,
-    "epochs": 2000,
+    "end_epoch": 2000,
     "save_intervals": [
       {"start": 0, "end": 10, "interval": 1},
       {"start": 10, "end": 50, "interval": 5},
