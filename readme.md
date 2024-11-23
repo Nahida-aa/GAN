@@ -51,11 +51,11 @@ python src/training/train.py
   "training_parameters": {
     "batch_size": 64,
     "learning_rate": 0.0002,
-    "epochs": 200,
+    "epochs": 1000,
     "save_intervals": [
       {"start": 0, "end": 10, "interval": 1},
       {"start": 10, "end": 50, "interval": 5},
-      {"start": 50, "end": 200, "interval": 10}
+      {"start": 50, "end": 1000, "interval": 10}
     ]
   },
   "path": {
