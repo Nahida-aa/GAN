@@ -75,7 +75,8 @@ def train_GAN(epochs, save_intervals, start_epoch=0):
     save_model(epochs-1, generator, discriminator)
 
 if __name__ == "__main__":
+    start_epoch = TRAINING_PARAMETERS.get('start_epoch', 0)  # 之前训练的轮数
     # 加载之前的模型
-    start_epoch = 1000  # 之前训练的轮数
-    load_model(generator, discriminator, start_epoch)
+    if start_epoch > 0:
+        load_model(generator, discriminator, start_epoch)
     train_GAN(epochs=TRAINING_PARAMETERS['epochs'], save_intervals=TRAINING_PARAMETERS['save_intervals'], start_epoch=start_epoch)

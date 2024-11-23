@@ -51,6 +51,8 @@ python src/training/train.py
   "training_parameters": {
     "batch_size": 64,
     "learning_rate": 0.0002,
+    
+    "start_epoch": 0,
     "epochs": 1000,
     "save_intervals": [
       {"start": 0, "end": 10, "interval": 1},
