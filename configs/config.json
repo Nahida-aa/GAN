@@ -1,13 +1,14 @@
 {
   "training_parameters": {
-    "batch_size": 64,
+    "batch_size": 128,
     "learning_rate": 0.0002,
-    "start_epoch": 1000,
-    "end_epoch": 2000,
+    "start_epoch": 50,
+    "end_epoch": 100,
     "save_intervals": [
       {"start": 0, "end": 10, "interval": 1},
       {"start": 10, "end": 50, "interval": 5},
-      {"start": 50, "end": 2000, "interval": 10}
+      {"start": 50, "end": 500, "interval": 10},
+      {"start": 500, "end": 3000, "interval": 50}
     ]
   },
   "path": {

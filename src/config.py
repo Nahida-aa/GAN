@@ -22,5 +22,6 @@ os.makedirs(LOGS_DIR, exist_ok=True)
 TRAINING_PARAMETERS = config_dict["training_parameters"]
 BATCH_SIZE = TRAINING_PARAMETERS['batch_size']
 LEARNING_RATE = TRAINING_PARAMETERS['learning_rate']
-EPOCHS = TRAINING_PARAMETERS['epochs']
+START_EPOCH = TRAINING_PARAMETERS['start_epoch']
+END_EPOCH = TRAINING_PARAMETERS['end_epoch']
 SAVE_INTERVALS = TRAINING_PARAMETERS['save_intervals']
