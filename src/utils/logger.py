@@ -10,6 +10,7 @@ def get_logger(name, log_file, level=logging.INFO):
     # 检查文件是否存在，如果不存在则写入表头
     if not os.path.exists(log_file):
         with open(log_file, 'w') as f:
+            print('Creating log file at {}'.format(log_file))
             f.write('"Timestamp","Epoch","Batch","D Loss","G Loss"\n')
     file_handler.setFormatter(formatter)
     logger.setLevel(level)

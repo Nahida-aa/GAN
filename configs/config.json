@@ -2,8 +2,8 @@
   "training_parameters": {
     "batch_size": 128,
     "learning_rate": 0.0002,
-    "start_epoch": 50,
-    "end_epoch": 100,
+    "start_epoch": 400,
+    "end_epoch": 800,
     "save_intervals": [
       {"start": 0, "end": 10, "interval": 1},
       {"start": 10, "end": 50, "interval": 5},
