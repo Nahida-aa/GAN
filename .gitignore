@@ -1,3 +1,4 @@
+# ai model training and inference
 __pycache__/
 *.pyc
 *.pyo
@@ -7,3 +8,20 @@ __pycache__/
 *.pth
 data/
 output/
+
+# web django
+.vercel
+*.log
+*.pyc
+__pycache__
+db.sqlite3
+media
+
+# Environments 
+.env 
+.venv 
+env/ 
+venv/ 
+ENV/ 
+env.bak/ 
+venv.bak/ 

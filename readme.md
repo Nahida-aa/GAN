@@ -33,17 +33,30 @@
 11. **webui**：使用 streamlit 搭建webui，方便使用
 
 ## using
-### install dependencies
+
+### 1. 通过命令行或 IDE 使用
+#### install dependencies
 ```sh
-pip install -r requirements.txt
+pip install -r requirements.cli.txt
 ```
-### 训练模型
+#### 训练模型
 ```sh
 python src/training/train.py
 ```
-### 推理
+#### 推理
 ```sh
 # 现在还没有好的训练结果，所以暂时没写推理脚本
+```
+
+### 2. 通过 webui 使用
+
+#### install dependencies
+```sh
+pip install -r requirements.txt
+```
+#### 启动 webui
+```sh
+python manage.py runserver
 ```
 
 ## config
